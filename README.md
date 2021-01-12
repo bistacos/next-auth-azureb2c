@@ -1,10 +1,11 @@
 # NextAuth.js Example
 
-[next-auth-example.now.sh](https://next-auth-example.now.sh)
+Forked from [next-auth-example.now.sh](https://next-auth-example.now.sh)
 
 ## About this project
 
-This is an example of how to use [NextAuth.js](https://next-auth.js.org) library to add authentication to a [Next.js](https://nextjs.org) application.
+This is an example of how to use [NextAuth.js](https://next-auth.js.org) library to add authentication to a [Next.js](https://nextjs.org) application...to which Brian has simply added a new `/pages/api/auth/[...nextauth].js` file and a
+.env.local config file that you can get from LastPass in `/Shared Consumer Platform/Local Configs/bbistolfo-next-auth example`.
 
 ## About NextAuth.js
 
