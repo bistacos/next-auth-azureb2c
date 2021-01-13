@@ -11,7 +11,8 @@ const userFlow = process.env.AUTH_USER_FLOW;
 // http://localhost:3000/member/api/auth/signin/azureb2c
 // (i.e. when NEXTAUTH_URL is set to http://localhost:3000/member/api/auth
 // rather than http://localhost:3000)
-// returns a 404
+// returns a 404. The issue is the same in both this example repo and the
+// current implementation of our actual app (branch bb/VEG-140)
 
 // Unfortunately the only documentation on this is a few lines at the top
 // of the following page:
