@@ -5,6 +5,20 @@ import NextAuth from 'next-auth';
 const tenantName = process.env.AUTH_TENANT_NAME;
 const userFlow = process.env.AUTH_USER_FLOW;
 
+// our problem seems to be that the POST to
+// http://localhost:3000/api/auth/signin/azureb2c succeeds
+// while the POST to 
+// http://localhost:3000/member/api/auth/signin/azureb2c
+// (i.e. when NEXTAUTH_URL is set to http://localhost:3000/member/api/auth
+// rather than http://localhost:3000)
+// returns a 404
+
+// Unfortunately the only documentation on this is a few lines at the top
+// of the following page:
+// https://next-auth.js.org/configuration/options
+
+// This seems to be an issue with our Azure configuration. There are redirect
+// uris for /member/api/auth/ but something else must be needed.
 const options = {
   session: {
     jwt: true,
